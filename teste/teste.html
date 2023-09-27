@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1 id="mude">Mude</h1>
+
+    <script>
+
+        var mudar = window.document.getElementById('mude')
+        mudar.addEventListener('click', mudarcor)
+        mudar.addEventListener('mouseenter', entrar)
+        mudar.addEventListener('mouseout', sair)
+
+        function mudarcor() {
+            mudar.innerText = 'clicou'
+            mudar.style.backgroundColor = 'red'
+        }
+        function entrar() {
+            mudar.innerText = 'entrei'
+            mudar.style.backgroundColor = 'yellow'
+        }
+        function sair(){
+            mudar.innerText = 'sai'
+            mudar.style.backgroundColor = 'blue'
+        }
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+   <header>
+    Calculando media
+   </header>
+<main>
+
+    <input type="number" name="RecebendoNota1" id="idRecebendoNota1">
+    <input type="number" name="RecebendoNota2" id="idRecebendoNota2">
+    <input type="number" name="RecebendoNota3" id="idRecebendoNota3">
+    <input type="number" name="RecebendoNota4" id="idRecebendoNota4">
+    <input type="button" value="Somar" onclick="Avaliação()">
+    <h2 id="calculando">Avaliação da nota:</h2>
+</main>
+
+
+<script>
+
+function Avaliação() {
+
+
+    var nota1 = window.document.getElementById('idRecebendoNota1')
+    var nota2 = window.document.getElementById('idRecebendoNota2')
+    var nota3 = window.document.getElementById('idRecebendoNota3')
+    var nota4 = window.document.getElementById('idRecebendoNota4')
+    var resultado = window.document.getElementById('calculando');
+    
+    var n1 = Number(idRecebendoNota1.value);
+    var n2 = Number(idRecebendoNota2.value);
+    var n3 = Number(idRecebendoNota3.value);
+    var n4 = Number(idRecebendoNota4.value);
+
+    var calculo = (n1*2)+(n2*2)+(n3*4)+(n4*4)
+    var calculo = calculo / 10
+    
+    var Resu = calculo;
+
+    if (Resu>=60) {
+        calculando.innerHTML = `Boa`
+    } else { calculando.innerHTML = `Ruim`
+    }
+}
+
+
+
+</script>
+</body>
+</html>

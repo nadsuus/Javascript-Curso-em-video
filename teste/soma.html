@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <header>
+        somando valores
+    </header>
+<main>
+    <input type="number" name="tex1" id="tex1">
+    <input type="number" name="tex2" id="tex2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado" >Resultado</div>
+
+</main>
+
+<script>
+
+    function somar() {
+
+
+        var num1 = window.document.getElementById('tex1');
+        var num2 = window.document.getElementById('tex2');
+        var resultado = window.document.getElementById('resultado')
+
+        var n1 = Number(tex1.value);
+        var n2 = Number(tex2.value);
+        
+        var soma = n1 + n2;
+        resultado.innerHTML = `A soma dos valores ${n1} e ${n2} é: ${soma}`
+    }
+        
+</script>
+
+</body>
+</html>
