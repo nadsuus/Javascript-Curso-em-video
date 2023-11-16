@@ -23,17 +23,14 @@ function statusDoTitular(){
     var idade = document.getElementById('idIdade');
     var status = document.getElementById('status');
 
-    console.log( typeof NaN);
     if (idade.value  <16){
         status.innerHTML = ("Não vota")
-        console.log("Gg")
 
     } else if (idade.value <= 16 || idade.value >65) {
         status.innerHTML = ("Voto opcional")
-        console.log("yh")
+        
     } else{
         status.innerHTML = ("voto obrigatorio")
-        console.log("kk")
     } 
     
     
