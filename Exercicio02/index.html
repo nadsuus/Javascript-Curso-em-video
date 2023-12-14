@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+    <header> Exercicio 02</header>
+
+    <main>
+        <p>Digite seu ano de nascimento</p>
+        <input type="number" name="idade" id="idIdade">
+
+        <input type="radio" name="sex" id="idHomem" value="Homem">
+        <label for="idHomem"> Homem</label>
+        <br>
+        <input type="radio" name="sex" id="idMulher" value="Mulher">
+        <label for="idMulher">Mulher</label>
+
+        <input class="btn-notification" type="button" value="Verificar" onclick="verificarinfor()">
+        <h3 id="resultado"> Hola</h3>
+    </main>
+
+    <script>
+
+        function verificarinfor() {
+
+            var sexo = document.getElementsByName('sex');
+            var genero = '';
+            var idade = document.getElementById('idIdade');
+            var dataAtual = new Date();
+
+            if (sexo[0].checked) {
+                genero = 'homem'
+                resultado.innerHTML = ("Homem")
+                window.alert("Sucesso")
+
+            } else if (sexo[1].checked) {
+
+                genero = 'Mulher'
+                resultado.innerHTML = ("Mulher")
+                window.alert("mulher")
+            } else {
+                window.alert("Fracasso")
+            }
+
+
+        // GGGGGGGGGGGGGGGGGGGGGGGGGGGGGG
+            let notification;
+
+            let notificationVisibility;
+
+            function showNotification() {
+
+
+                if (Notification.permission !== 'granted') {
+                    Notification.requestPermission()
+    } else {
+
+                    notification = new Notification('Notificação Cringe!', {
+
+                        body: 'Vai neymar, eu sei que tu gosta né neymar!!!',
+
+                        icon: 'img/seuSirigueijo.jpeg',
+
+                        image: 'img/lulu.png',
+
+                    });
+
+                }
+
+            }
+
+            function showNotificationVisibility() {
+
+                if (document.visibilityState === 'hidden') {
+
+                    notificationVisibility = new Notification('Ei!!!', {
+
+                        body: 'Volta, Corno!',
+
+                        image: 'img/xamuel.png'
+
+                    });
+
+                } else {
+
+                    notificationVisibility.close();
+
+                }
+
+            };
+
+            let btnNotification = document.getElementById('resultado');
+
+            btnNotification.addEventListener("click", showNotification);
+
+            document.addEventListener('visibilitychange', showNotificationVisibility)
+        }
+
+    </script>
+</body>
+
+
+</html>

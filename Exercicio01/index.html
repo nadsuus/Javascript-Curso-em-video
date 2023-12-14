@@ -17,12 +17,15 @@
     <Section>
 
         <div>
-            <input type="button" value="Manha" id="manha">
-            <input type="button" value="Tarde" id="tarde">
-            <input type="button" value="Noite" id="noite">
+            <input type="button" value="Manha" id="manha" onclick="mudarParamanha()">
+            <input type="button" value="Tarde" id="tarde" onclick="mudarParatarde()">
+            <input type="button" value="Noite" id="noite" onclick="mudarParanoite()">
         </div>
 
-        <div id="Horario"> <img src="" alt=""></div>
+        <div>
+            <img id="horario" src="" alt="">
+            <h2 id="tituloHorario"></h2>
+        </div>
 
     </Section>
 
@@ -32,22 +35,31 @@
 
     <script>
 
-        function manha() {
-            let manha = document.getElementById('manha')
-if (manha) == true {
-    Horario.inner
-}
-        }
 
-        function tarde() {
-            let tarde = document.getElementById('tarde')
+        function mudarParamanha() {
 
-        }
+            var nomeEstado = document.getElementById('tituloHorario')
+            var estado = document.getElementById('horario')
+            estado.src = ('./Imgs/Manha.gif')
+            nomeEstado.innerHTML = ("Esta de Manha")
+            document.body.style.background = '#e2ffff'
+        };
+        function mudarParatarde() {
 
-        function noite() {
-            let noite = document.getElementById('noite')
+            var nomeEstado = document.getElementById('tituloHorario')
+            var estado = document.getElementById('horario')
+            estado.src = ('./Imgs/Tarde.gif')
+            nomeEstado.innerHTML = ("Esta de tarde")
+            document.body.style.background = ('#d8542b')
+        };
 
-        }
+        function mudarParanoite() {
+            var nomeEstado = document.getElementById('tituloHorario')
+            var estado = document.getElementById('horario')
+            estado.src = ('./Imgs/noite.gif')
+            nomeEstado.innerHTML = ("Esta de noite")
+            document.body.style.background =(' #000942')
+        };
 
     </script>
 </body>
